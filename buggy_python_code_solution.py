@@ -7,6 +7,7 @@ app = flask.Flask(__name__)
 
 
 @app.route("/")
+#gets version and ulr
 def index():
     version = flask.request.args.get("urllib_version")
     url = flask.request.args.get("url")

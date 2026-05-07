@@ -19,7 +19,7 @@ class Person(object):
         self.name = name
 
 
-"prints name tag"
+#prints name tag
 def print_nametag(format_string, person):
     print(format_string.format(person=person))
 
@@ -40,7 +40,7 @@ def load_yaml(filename):
     stream = open(filename)
     deserialized_data = yaml.load(stream, Loader=yaml.Loader) #deserializing data
     return deserialized_data
-    
+
 def authenticate(password):
     # Assert that the password is correct
     assert password == "Iloveyou", "Invalid password!"
