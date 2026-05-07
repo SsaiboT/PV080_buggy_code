@@ -2,7 +2,6 @@ import sys
 import os
 import yaml
 import flask
-import urllib
 
 app = flask.Flask(__name__)
 
@@ -20,13 +19,14 @@ class Person(object):
         self.name = name
 
 
+"prints name tag"
 def print_nametag(format_string, person):
     print(format_string.format(person=person))
 
 
 def fetch_website(urllib_version, url):
     # Import the requested version (2 or 3) of urllib
-    #exec(f"import urllib{urllib_version} as urllib", globals())
+    exec(f"import urllib{urllib_version} as urllib", globals())
     # Fetch and print the requested URL
  
     try: 
